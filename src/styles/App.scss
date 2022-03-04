@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(94, 92, 92);
+  list-style-type: none;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  &__wrapper {
+    width: 1200px;
+  }
+  &__title {
+    padding-left: 10px;
+  }
+}
+.main {
+  background-color: white;
+  width: 1200px;
+  display: flex;
+  &__column--left,
+  &__column--right {
+    width: 50%;
+    border: 1.5px solid rgb(184, 182, 182);
+  }
+  &__column--left {
+    border-right: none;
+  }
+  &__form,
+  &__selected--count {
+    padding: 10px;
+    border-bottom: 1.5px solid rgb(184, 182, 182);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__selected--count {
+    justify-content: space-between;
+  }
+  &__cities--count {
+    height: 100px;
+    font-weight: bold;
+    border-bottom: 1.5px solid rgb(184, 182, 182);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  &__form--input {
+    padding: 0 0 10px 10px;
+    border: none;
+    border-bottom: 1.5px solid rgb(184, 182, 182);
+    font-size: 18px;
+    line-height: 20px;
+    width: 540px;
+    outline: none;
+  }
+  &__form--label {
+    padding: 0 0 10px 10px;
+    font-size: 18px;
+  }
+}
+.clear__button {
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(78, 128, 194);
+  cursor: pointer;
+  padding: 5px;
+}
+.cities__count {
+  padding-left: 10px;
+}
+.city__icon {
+  height: 50px;
+  padding-right: 10px;
+}
+.city__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--item {
+    padding: 20px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: rgb(182, 209, 245);
+    }
+  }
+  &--label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    cursor: pointer;
+  }
+  &--name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+.clear__x {
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.selected__city--detail {
+  display: flex;
+  align-items: center;
+}
+.city__list--item.selected {
+  justify-content: space-between;
+}
